@@ -1,4 +1,4 @@
-# ======================== Armoireplus Blocks ======================== 
+# ================== Armoireplus Blocks =================== 
 
 | | |
 |--- | :-:|
@@ -22,7 +22,7 @@
 Copier le plugin dans le dossier des plugins et penser à l'activer.
 
 
-## ========================  Liste des blocs disponibles ======================== 
+## =================  Liste des blocs disponibles =================
 
 - = Bloc 1  =
 
@@ -30,7 +30,7 @@ Copier le plugin dans le dossier des plugins et penser à l'activer.
 - = Bloc 2  =
 
 
-## ========================  Captures d'écran ======================== 
+## ======================  Captures d'écran ======================
 
 
 
@@ -39,5 +39,5 @@ Copier le plugin dans le dossier des plugins et penser à l'activer.
 - = 0.1.0 =
 * Release
 
-## ========================  Arbitrary section ======================== 
+## ======================  Arbitrary section ====================== 
 
