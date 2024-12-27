@@ -25,6 +25,15 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function create_block_armoireplus_blocks_block_init() {
-	register_block_type( __DIR__ . '/build' );
+	register_block_type( __DIR__ . '/build/slogan' );
+    register_block_type( __DIR__ . '/build/editable' );
+
+	// require_once __DIR__ . '/src/slogan/render.php';
+	// register_block_type_from_metadata(
+    //     __DIR__ . '/src/slogan/', //chemin vers block.json
+    //     array(
+    //         'render_callback' => 'render_mon_bloc_custom', // Nom de la fonction de rendu ds render.php
+    //     )
+    // );
 }
 add_action( 'init', 'create_block_armoireplus_blocks_block_init' );
