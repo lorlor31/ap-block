@@ -71,10 +71,10 @@ function edit(props) {
     tagName: "p" // Balise HTML utilisée pour le texte (p, h1, div, etc.)
     // value='Au Delà des Standards, Parce Que \: Pensé, Dessiné et Fabriqué en France  Armoire Garanti 10 ANS conçue pour un usage intensif  Rideaux testés et certifiés pour un minimum de 40,000 cycles ouverture / fermeture  Certificat : NF EN 14073-2 / NF EN 14073-3 / NF EN 14074 / NF D 62-041 / NF Office Excellence Certifié / Certification GS  Qualité reconnue par l’institut technologique FCBA'
     ,
-    value: content !== null && content !== void 0 ? content : 'sdds',
+    value: content,
     onChange: onChangeContent // Fonction appelée quand le contenu change
     ,
-    placeholder: "Au Del\xE0 des Standards, Parce Que \\: Pens\xE9, Dessin\xE9 et Fabriqu\xE9 en France  Armoire Garanti 10 ANS con\xE7ue pour un usage intensif  Rideaux test\xE9s et certifi\xE9s pour un minimum de 40,000 cycles ouverture / fermeture  Certificat : NF EN 14073-2 / NF EN 14073-3 / NF EN 14074 / NF D 62-041 / NF Office Excellence Certifi\xE9 / Certification GS  Qualit\xE9 reconnue par l\u2019institut technologique FCBA"
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Au Delà des Standards, Parce Que \: Pensé, Dessiné et Fabriqué en France  Armoire Garanti 10 ANS conçue pour un usage intensif  Rideaux testés et certifiés pour un minimum de 40,000 cycles ouverture / fermeture  Certificat : NF EN 14073-2 / NF EN 14073-3 / NF EN 14074 / NF D 62-041 / NF Office Excellence Certifié / Certification GS  Qualité reconnue par l’institut technologique FCBA', 'armoireplus-blocks')
   });
 }
 
@@ -263,7 +263,7 @@ module.exports = window["wp"]["i18n"];
   \*******************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"armoireplus-blocks/slogan","version":"0.1.0","title":"Armoireplus Slogan Block","category":"blocs-perso","description":"Slogan d\'AP","example":{},"supports":{"color":{"background":true,"text":true},"html":false,"align":true,"interactivity":true,"shadow":true,"typography":{"fontSize":true,"lineHeight":true,"textAlign":true,"fontWeight":true}},"attributes":{"content":{"type":"string","source":"html","selector":"p"}},"textdomain":"armoireplus-slogan-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"armoireplus-blocks/slogan","version":"0.1.0","title":"Armoireplus Slogan Block","category":"blocs-perso","description":"Slogan d\'AP","keywords":["slogan"],"example":{},"supports":{"color":{"background":true,"text":true},"html":false,"align":true,"interactivity":true,"shadow":true,"typography":{"fontSize":true,"lineHeight":true,"textAlign":true,"fontWeight":true}},"attributes":{"content":{"type":"string","source":"html","selector":"p"}},"textdomain":"armoireplus-slogan-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 

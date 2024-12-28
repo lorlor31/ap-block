@@ -6,6 +6,9 @@
   "title": "Armoireplus Slogan Block",
   "category": "blocs-perso",
   "description": "Slogan d'AP",
+  "keywords": [
+    "slogan"
+  ],
   "example": {},
   "supports": {
     "color": {

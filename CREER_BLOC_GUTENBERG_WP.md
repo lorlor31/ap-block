@@ -4,8 +4,8 @@ Basé sur https://developer.wordpress.org/block-editor/getting-started/tutorial/
 
 ## Quelques concepts en vrac sur le fonctionnement des blocs
 - L'enregistrement = registration se fait côté client et côté serveur (cf . https://developer.wordpress.org/block-editor/getting-started/fundamentals/registration-of-a-block/).
-- Pour le rendu, il faut choisir entre un rendu statique (via la fct `save()` ) ou un rendu dynamique via `render.php`, si on a des données qui sont récupérées via API ou autre ou générées ...
-- npm run start va nous servir pour voir les changements en temps réel lors du développement du bloc.
+- Pour le rendu, il faut choisir entre un rendu statique (via la fct `save()` ) ou un rendu dynamique via `render.php`, si on a des données qui sont récupérées via API ou autre ou générées ... Ou les deux !
+- `npm run start` va nous servir pour voir les changements en temps réel lors du développement du bloc.
 Mais une fois le bloc fonctionnel, on pourra le builder avec npm run build et les copier dans le dossier /build du plugin.
 ## Installer create-block
 Create-block va installer un package node pour avoir la structure du plugin qi contiendra le bloc.
@@ -76,7 +76,7 @@ Il y a en général les fichiers suivants  :
     "viewScript": "file:./view.js" /:style côté frontend
 }
 ```
-- **icon** : On peut utiliser les icônes de Dashicons https://developer.wordpress.org/resource/dashicons/#pdf. 
+- **icon** : On peut utiliser les icônes de [Dashicons](https://developer.wordpress.org/resource/dashicons/#pdf). 
 On peut enlever la ligne "icon" si on veut par exemple mettre un svg à la place.
 Il faudra le faire dans le fichier index.js (cf ci-dessous)
 - **supports** : 
@@ -94,7 +94,7 @@ On peut rajouter des options pour que l'utilisateur customise le style du bloc. 
 },
 
 ```
-Doc détaillée : https://developer.wordpress.org/block-editor/reference-guides/block-api/block-supports/
+[Doc détaillée sur les supports](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-supports/)
 Si le style est juste géré par les supports, on peut enlever les lignes editorStyle, style et viewScript du block.json.
 Et de même, on pourra enlever les lignes
 ```
@@ -137,7 +137,7 @@ export default function Edit() {
     );
 }
 ```
-Là on a déclaré une constante qu'on va afficher 
+Là on a déclaré une constante qu'on va afficher dans un élément HTML <p> mais on va souvent utiliser des blocs WP déjà développés [composants WP](https://wordpress.github.io/gutenberg/?path=/docs/docs-introduction--page)
 
 ### render.php ds /src 
 En modifiant le fichier edit.js, le bloc est modifié dans l'interface de l'éditeur mais par contre dans le rendu de la page, on n'aura pas encore le contenu modifié.
