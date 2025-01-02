@@ -1,12 +1,13 @@
 # CREER UN BLOC GUTENBERG
 
-Basé sur https://developer.wordpress.org/block-editor/getting-started/tutorial/
+Basé sur https://developer.wordpress.org/block-editor/getting-started/tutorial/ + autres
 
-## Quelques concepts en vrac sur le fonctionnement des blocs
+## Quelques concepts en vrac sur le fonctionnement des blocs (à relire à la fin du tuto)
 - L'enregistrement = registration se fait côté client et côté serveur (cf . https://developer.wordpress.org/block-editor/getting-started/fundamentals/registration-of-a-block/).
 - Pour le rendu, il faut choisir entre un rendu statique (via la fct `save()` ) ou un rendu dynamique via `render.php`, si on a des données qui sont récupérées via API ou autre ou générées ... Ou les deux !
 - `npm run start` va nous servir pour voir les changements en temps réel lors du développement du bloc.
-Mais une fois le bloc fonctionnel, on pourra le builder avec npm run build et les copier dans le dossier /build du plugin.
+Mais une fois le bloc fonctionnel, on pourra le builder avec `npm run build` et copier les fichiers dans le dossier /build du plugin.
+
 ## Installer create-block
 Create-block va installer un package node pour avoir la structure du plugin qi contiendra le bloc.
 Créer un répertoire qui contiendra le plugin et dedans, lancer la commande : 
@@ -137,7 +138,29 @@ export default function Edit() {
     );
 }
 ```
-Là on a déclaré une constante qu'on va afficher dans un élément HTML <p> mais on va souvent utiliser des blocs WP déjà développés [composants WP](https://wordpress.github.io/gutenberg/?path=/docs/docs-introduction--page)
+Là on a déclaré une constante qu'on va afficher dans un élément HTML <p> mais on va souvent utiliser des blocs WP déjà développés [composants WP](https://wordpress.github.io/gutenberg/?path=/docs/docs-introduction--page).
+On verra plus tard qu'on aura souvent dans le `return`une structure :
+```
+return (
+        <Fragment>
+
+            // Toolbar
+            <BlockControls> 
+            </BlockControls>
+
+            // L'inspecteur
+            <InspectorControls>
+            </InspectorControls>
+
+            // Bloc
+            <div { …blockProps }>
+                <RichText />
+            </div>
+
+        </Fragment>
+    )
+```
+( vérifier si la Toolbar est dispo pour ts les composants)
 
 ### render.php ds /src 
 En modifiant le fichier edit.js, le bloc est modifié dans l'interface de l'éditeur mais par contre dans le rendu de la page, on n'aura pas encore le contenu modifié.
