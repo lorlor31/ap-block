@@ -1,0 +1,41 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "armoireplus-blocks/product-short-desc",
+	"version": "0.1.0",
+	"title": "Armoireplus Product Short Desc",
+	"category": "blocs-perso",
+	"description": "Description courte du produit avec anim au survol",
+	"keywords": [ "description courte produit" ],
+	"example": {},
+	"supports": {
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"html": false,
+		"align":true,
+		"interactivity" : true,
+		"shadow": true,
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"textAlign": true,
+			"fontWeight": true
+
+		}
+	},
+	"attributes": {
+        "content": {
+            "type": "string",
+            "source": "html",
+            "selector": "p"
+        }
+    },
+	"textdomain": "armoireplus-product-short-desc",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}

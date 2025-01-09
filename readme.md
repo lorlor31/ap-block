@@ -2,7 +2,7 @@
 
 | | |
 |--- | :-:|
-|Contributors:   | lorlor|
+|Contributors:   | laure|
 |Tags:     |block |
 |Tested up to:      | 6.6|
 | Stable tag:| 0.1.0|
@@ -27,6 +27,9 @@ Copier le plugin dans le dossier des plugins et penser à l'activer.
 
 - = Bloc 2  =
 
+
+Actuellement c'est en développement, le bloc slogan contient le plus de fonctionnalités, àla fois bloc éditable et dynamique mais contenu pas récupéré côté PHP, ilest ple plus bordélique.
+Le bloc product-short-desc en est une copie mais allégée de l'inutile qu'avec le rendu dynamique.
 
 ## Captures d'écran 
 

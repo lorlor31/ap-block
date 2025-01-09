@@ -63,6 +63,24 @@ function create_block_armoireplus_blocks_block_init() {
 
     ));
 
+    // Bloc 4 : product-short-desc
+    register_block_type(__DIR__ . '/build/product-short-desc', array(
+        'enqueue_assets' => function() {
+            wp_enqueue_script(
+                'product-short-desc-block-js',
+                plugin_dir_url(__FILE__) . 'build/product-short-desc/index.js',
+                array('wp-blocks', 'wp-element'),
+                '1.0.0',
+                true
+            );
+            wp_enqueue_style(
+                'product-short-desc-block-css',
+                plugin_dir_url(__FILE__) . 'build/product-short-desc/style.css',
+                array(),
+                '1.0.0'
+            );
+        },
+    ));
     // Bloc 2 : Editable
     register_block_type(__DIR__ . '/build/editable', array(
         'enqueue_assets' => function() {
