@@ -387,3 +387,37 @@ export default function save( { attributes } ) {
 - Mais un problème se posera si on essaie de mettre à jour ultérieurement, le HTML en BDD sera contradictoire avec les données générées dynamiquement donc il faut rajouter un attribut fallbackCurrentYear qui va nous permettre de gérer les contradictions. On remplacera currentYear par cet attribut dans save (cf ficher save.js final). 
 - Il faut veiller aussi à ne pas rendre de HTML si on n'a pas de fallbackCurrentYear, revoir toute la partie 
 https://developer.wordpress.org/block-editor/getting-started/tutorial/#handling-dynamic-content-in-statically-rendered-blocks
+
+## CREER CATEGORIE DE BLOCS
+
+Dans functions.php
+```
+function ajouter_categorie_personnalisee_blocs( $categories, $post ) {
+    return array_merge(
+        $categories,
+        array(
+            array(
+                'slug'  => 'ma-categorie-personnalisee',
+                'title' => __( 'Ma catégorie personnalisée', 'mon-theme' ),
+                'icon'  => 'star-filled', // Optionnel : un icône pour représenter la catégorie.
+            ),
+        )
+    );
+}
+add_filter( 'block_categories_all', 'ajouter_categorie_personnalisee_blocs', 10, 2 );
+
+```
+
+## VOIR TOUS LES BLOCS ENREGISTRES
+
+Dans functions.php
+```
+add_action( 'init', function() {
+    $blocks = WP_Block_Type_Registry::get_instance()->get_all_registered();
+    foreach ( $blocks as $block_name => $block ) {
+        laure_log( $block_name );
+    }
+});
+
+
+```

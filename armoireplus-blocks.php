@@ -24,9 +24,84 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
+// function create_block_armoireplus_blocks_block_init() {
+// 	register_block_type( __DIR__ . '/build/slogan' );
+//     // register_block_type( __DIR__ . '/build/editable' );
+//     register_block_type( __DIR__ . '/build/editable-brand' );
+//     register_block_type( __DIR__ . '/build/editable', array(
+//         'editor_script' => 'my-block-a-js',
+//         'style' => 'my-block-a-css',
+//         'enqueue_assets' => function() {
+//             // Charger les scripts et styles uniquement si le bloc est utilisé
+//             wp_enqueue_script('my-block-a-js', plugin_dir_url(__FILE__) . 'build/block-a.js', array('wp-blocks', 'wp-element'), '1.0.0', true);
+//             wp_enqueue_style('my-block-a-css', plugin_dir_url(__FILE__) . 'build/block-a.css', array(), '1.0.0');
+//         },
+//     ));
+
+
+
 function create_block_armoireplus_blocks_block_init() {
-	register_block_type( __DIR__ . '/build/slogan' );
-    register_block_type( __DIR__ . '/build/editable' );
+    // Bloc 1 : Slogan
+    register_block_type(__DIR__ . '/build/slogan', array(
+        'enqueue_assets' => function() {
+            // Charger les assets uniquement si le bloc est utilisé
+            wp_enqueue_script(
+                'slogan-block-js',
+                plugin_dir_url(__FILE__) . 'build/slogan/index.js',
+                array('wp-blocks', 'wp-element'),
+                '1.0.0',
+                true
+            );
+            wp_enqueue_style(
+                'slogan-block-css',
+                plugin_dir_url(__FILE__) . 'build/slogan/style.css',
+                array(),
+                '1.0.0'
+            );
+        },
+    ));
+
+    // Bloc 2 : Editable
+    register_block_type(__DIR__ . '/build/editable', array(
+        'enqueue_assets' => function() {
+            wp_enqueue_script(
+                'editable-block-js',
+                plugin_dir_url(__FILE__) . 'build/editable/index.js',
+                array('wp-blocks', 'wp-element'),
+                '1.0.0',
+                true
+            );
+            wp_enqueue_style(
+                'editable-block-css',
+                plugin_dir_url(__FILE__) . 'build/editable/style.css',
+                array(),
+                '1.0.0'
+            );
+        },
+    ));
+
+    // Bloc 3 : Editable Brand
+    register_block_type(__DIR__ . '/build/editable-brand', array(
+        'enqueue_assets' => function() {
+            wp_enqueue_script(
+                'editable-brand-block-js',
+                plugin_dir_url(__FILE__) . 'build/editable-brand/index.js',
+                array('wp-blocks', 'wp-element'),
+                '1.0.0',
+                true
+            );
+            wp_enqueue_style(
+                'editable-brand-block-css',
+                plugin_dir_url(__FILE__) . 'build/editable-brand/style.css',
+                array(),
+                '1.0.0'
+            );
+        },
+    ));
+}
+add_action('init', 'create_block_armoireplus_blocks_block_init');
+
+
 
 	// require_once __DIR__ . '/src/slogan/render.php';
 	// register_block_type_from_metadata(
@@ -35,5 +110,3 @@ function create_block_armoireplus_blocks_block_init() {
     //         'render_callback' => 'render_mon_bloc_custom', // Nom de la fonction de rendu ds render.php
     //     )
     // );
-}
-add_action( 'init', 'create_block_armoireplus_blocks_block_init' );

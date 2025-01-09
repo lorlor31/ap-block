@@ -11,8 +11,16 @@ export default function save(props) {
     // content = props.attributes.content || slogan ;
     console.log('content',content);
 	console.log('slogan',slogan);
-    return <RichText.Content { ...useBlockProps.save() }
-    tagName="p" 
-    value={content||slogan}
-    />;
+    return (
+			<div  {...useBlockProps.save({// permet de rajouter la class custom 
+                className: 'hover-text-block',
+            })}>
+				<RichText.Content
+					{...useBlockProps.save()} 
+					tagName="p"
+					value={content || slogan}
+                    
+				/>
+			</div>
+		); 
 }
