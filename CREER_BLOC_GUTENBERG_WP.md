@@ -399,9 +399,7 @@ function ajouter_categorie_personnalisee_blocs( $categories, $post ) {
             array(
                 'slug'  => 'ma-categorie-personnalisee',
                 'title' => __( 'Ma catégorie personnalisée', 'mon-theme' ),
-                'icon'  => 'star-filled', // Optionnel : un icône pour représenter la catégorie.
-            ),
-        )
+                'icon'  => 'star-filled', // Optionnel : un icône pour représenter l
     );
 }
 add_filter( 'block_categories_all', 'ajouter_categorie_personnalisee_blocs', 10, 2 );

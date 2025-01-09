@@ -25,17 +25,12 @@ console.log( 'Hello World! (from create-block-armoireplus-blocks block)' );
 /* eslint-enable no-console */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Sélectionne tous les éléments du bloc
-    const hoverBlocks = document.querySelectorAll('.hover-text-block');
-    console.log(hoverBlocks);
-
-    hoverBlocks.forEach((block) => {
-        // block.addEventListener('mouseover', () => {
-        //     alert('Texte survolé dans le front-end !');
-        // });
-
-        block.addEventListener('click', () => {
-            alert('Clic sur le texte dans le front-end !');
-        });
+    const productShortDescPart1 = document.querySelector('.product-short-desc-part1');
+    const productShortDescPart2 = document.querySelector('.product-short-desc-part2');
+    productShortDescPart1.addEventListener('mouseenter', () => {
+        productShortDescPart2.classList.remove('invisible') ;
+    });
+    productShortDescPart1.addEventListener('mouseleave', () => {
+        productShortDescPart2.classList.add('invisible') ;
     });
 });

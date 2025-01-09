@@ -59,6 +59,8 @@ function create_block_armoireplus_blocks_block_init() {
                 '1.0.0'
             );
         },
+        // 'render_callback' => 'render_slogan'// pas besoins pouisque déclaré ds block.json
+
     ));
 
     // Bloc 2 : Editable

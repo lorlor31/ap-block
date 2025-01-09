@@ -5,8 +5,35 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-armoireplus-blocks {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+// .wp-block-create-block-armoireplus-blocks {
+// 	background-color: #21759b;
+// 	color: #fff;
+// 	padding: 2px;
+// }
+
+.product-short-desc-container {
+	display: flex;
+	flex-direction: column;
+	border : solid #dbd9d9 1px;
+	padding: 1rem;
+	box-shadow: 0 0 3px 0 rgba(0,0,0,.2);
+}
+
+.product-short-desc-part1 p:first-of-type {
+	font-weight: bold ;
+}
+
+.bloc_audela_standard p span {
+	font-weight: normal ;
+}
+
+.product-short-desc-part1 .icon-show-more {
+text-align: center;}
+
+.visible{
+	display : block ;
+}
+
+.invisible{
+	display : none ;
 }
