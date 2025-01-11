@@ -20,10 +20,6 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
  */
 
-/* eslint-disable no-console */
-console.log( 'Hello World! (from create-block-armoireplus-blocks block)' );
-/* eslint-enable no-console */
-
 document.addEventListener('DOMContentLoaded', () => {
     const productShortDescPart1 = document.querySelector('.product-short-desc-part1');
     const productShortDescPart2 = document.querySelector('.product-short-desc-part2');
